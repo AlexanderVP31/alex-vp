@@ -1,0 +1,88 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+      },
+      colors: {
+        background: '#0A0A0A',
+        surface: '#121212',
+        primary: {
+          DEFAULT: '#b8d8a7',
+          50: '#f4f8f1',
+          100: '#e6f0e0',
+          200: '#d0e2c3',
+          300: '#b8d8a7',
+          400: '#9cc985',
+          500: '#7fb563',
+          600: '#669548',
+          700: '#52773a',
+          800: '#435f31',
+          900: '#384f2b',
+        },
+        secondary: {
+          DEFAULT: '#3772FF',
+          50: '#EBF0FF',
+          100: '#D0DDFF',
+          200: '#A1BBFF',
+          300: '#719AFF',
+          400: '#4278FF',
+          500: '#3772FF',
+          600: '#0045F5',
+          700: '#0036C2',
+          800: '#00268F',
+          900: '#00175C',
+        },
+        accent: {
+          DEFAULT: '#59FFA0',
+          50: '#EEFFFF',
+          100: '#CFFDE7',
+          200: '#A0FBCF',
+          300: '#70FAB7',
+          400: '#59FFA0',
+          500: '#17DC78',
+          600: '#12AC5E',
+          700: '#0D7D44',
+          800: '#084D2A',
+          900: '#031E10',
+        },
+        gray: {
+          50: '#FAFAFA',
+          100: '#F5F5F5',
+          200: '#E5E5E5',
+          300: '#D4D4D4',
+          400: '#A3A3A3',
+          500: '#737373',
+          600: '#525252',
+          700: '#404040',
+          800: '#262626',
+          900: '#171717',
+        },
+      },
+      animation: {
+        'float': 'float 6s ease-in-out infinite',
+        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'spin-slow': 'spin 8s linear infinite',
+        'scroll-y': 'scrollY 20s linear infinite',
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+        scrollY: {
+          '0%': { transform: 'translateY(0)' },
+          '100%': { transform: 'translateY(-50%)' },
+        },
+      },
+      boxShadow: {
+        'glow': '0 0 15px rgba(184, 216, 167, 0.5)',
+        'glow-accent': '0 0 15px rgba(89, 255, 160, 0.5)',
+        'glow-secondary': '0 0 15px rgba(55, 114, 255, 0.5)',
+      },
+    },
+  },
+  plugins: [],
+};
