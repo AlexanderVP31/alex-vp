@@ -13,6 +13,8 @@ import ReactDOM from 'react-dom';
 // Importa tus assets de video aquí
 import DocumentoDigitalVideo from '../assets/video/DocumentoDigital.mp4';
 
+import AdminDashboards from '../assets/img/adminDashboards.jpg';
+
 // Componente de Video con controles personalizados
 const CustomVideoPlayer = ({ src, title, onFullscreen }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -345,7 +347,7 @@ const Projects: React.FC = () => {
       id: 1,
       title: t('adminDashboardsPlatform'),
       description: t('adminDashboardsDesc'),
-      image: '/src/assets/img/adminDashboards.jpg',
+      image: AdminDashboards,
       tags: ['Angular', 'Java','Spring Boot','Sql Server', 'Power BI Desktop'],
       link: 'https://actours.com.pe/acadmin/login',
       github: 'https://github.com/avmkui/admin_reportes',

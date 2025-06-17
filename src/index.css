@@ -5,7 +5,13 @@
 @layer base {
   body {
     @apply bg-background text-gray-100 font-sans overflow-x-hidden;
-    cursor: url('/src/assets/cursorlogo.svg'), auto;
+    /* Ruta absoluta con base */
+    cursor: url('/alex-vp/assets/cursorlogo.svg'), auto;
+  }
+
+   /* Sobreescribe para producción usando la ruta base */
+  body[data-env="production"] {
+    cursor: url('/alex-vp/assets/cursorlogo.svg'), auto;
   }
 
   ::-webkit-scrollbar {

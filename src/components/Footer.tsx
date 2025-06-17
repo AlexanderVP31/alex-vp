@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { Heart } from 'lucide-react';
 import { useTranslation } from '../hooks/useTranslation';
 
+import LogoSinFondo from '../assets/logo/iconsinfondo.png';
+
 const Footer: React.FC = () => {
   const { t } = useTranslation();
 
@@ -23,7 +25,7 @@ const Footer: React.FC = () => {
             <div className="md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
                   <img 
-                    src="/src/assets/logo/iconsinfondo.png" 
+                    src={LogoSinFondo}
                     alt="Icon"
                     className="w-12 h-12" // Tamaño pequeño del logo
                   />

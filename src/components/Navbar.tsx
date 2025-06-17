@@ -5,6 +5,8 @@ import { useAudioStore } from '../store/audioStore';
 import { useTranslation } from '../hooks/useTranslation';
 import LanguageSelector from './ui/LanguageSelector';
 
+import LogoSinFondo from '../assets/logo/iconsinfondo.png';
+
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -58,7 +60,7 @@ const Navbar: React.FC = () => {
           <div className="flex items-center space-x-2">
             <a href="#">
               <img
-                src="/src/assets/logo/iconsinfondo.png"
+                src={LogoSinFondo}
                 alt="Logo"
                 className="w-12 h-12"
                 loading="lazy"

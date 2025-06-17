@@ -1,6 +1,8 @@
 import React, { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
+import facImage from '../../assets/fac.png';
+
 const Avatar: React.FC = () => {
   const avatarRef = useRef<HTMLDivElement>(null);
   
@@ -56,7 +58,7 @@ const Avatar: React.FC = () => {
       <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary-400 to-secondary-400 opacity-20 blur-xl animate-pulse-slow"></div>
       <div className="relative w-full h-full overflow-hidden rounded-full border-2 border-gray-700 p-1">
         <img 
-          src="/src/assets/img/fac.png" 
+          src={facImage}
           alt="Avatar" 
           className="w-full h-full object-cover rounded-full"
         />

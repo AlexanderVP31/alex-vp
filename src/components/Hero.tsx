@@ -4,6 +4,8 @@ import { ChevronDown } from 'lucide-react';
 import { useTranslation } from '../hooks/useTranslation';
 import Avatar from './ui/Avatar';
 
+import LogoSinFondo from '../assets/logo/iconsinfondo.png';
+
 const Hero: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { t } = useTranslation();
@@ -66,7 +68,7 @@ const Hero: React.FC = () => {
             >
               <a href="#">
                 <img
-                  src="/src/assets/logo/iconsinfondo.png"
+                  src={LogoSinFondo}
                   alt="Logo"
                   className="w-15 h-15"
                   loading="lazy"
