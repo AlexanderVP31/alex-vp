@@ -11,7 +11,12 @@ import { useTranslation } from '../hooks/useTranslation';
 import ReactDOM from 'react-dom';
 
 // Importa tus assets de video aquí
+//import DocumentoDigitalVideo from '../assets/video/DocumentoDigital.mp4';
 import DocumentoDigitalVideo from '../assets/video/DocumentoDigital.mp4';
+import OePromartVideo from '../assets/video/OePromartVideo.mp4';
+import SeguroVideo from '../assets/video/SeguroVideo.mp4';
+import MowaVideo from '../assets/video/MowaVideo.mp4';
+
 
 import AdminDashboards from '../assets/img/adminDashboards.jpg';
 
@@ -363,6 +368,33 @@ const Projects: React.FC = () => {
     },
     {
       id: 3,
+      title: t('oepromarPlatform'),
+      description: t('oepromarDesc'),
+      video: OePromartVideo,
+      tags: ['Angular','PrimeNG', 'Java','Spring Boot', 'Sql Server'],
+      link: 'https://actours.com.pe/adminproveedor/login',
+      github: 'https://github.com/avmkui/app_proveedor',
+    },
+    {
+      id: 4,
+      title: t('seguroPlatform'),
+      description: t('seguroDesc'),
+      video: SeguroVideo,
+      tags: ['Angular','Bootstrap', '.Net', 'Oracle'],
+      link: 'https://protectasecurity.pe/seguro-vida-ley',
+      github: 'https://github.com/avmkui/app_proveedor',
+    },
+    {
+      id: 5,
+      title: t('mowaPlatform'),
+      description: t('mowaDesc'),
+      video: MowaVideo,
+      tags: ['JavaScript', 'Java','Spring Boot', 'PostgreSQL'],
+      link: 'https://www.contactahabilidad.com',
+      github: 'https://github.com/avmkui/app_proveedor',
+    },
+    {
+      id: 6,
       title: t('ecommercePlatform'),
       description: t('ecommerceDesc'),
       image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
@@ -371,7 +403,7 @@ const Projects: React.FC = () => {
       github: '#',
     },
     {
-      id: 4,
+      id: 7,
       title: t('musicStreamingApp'),
       description: t('musicStreamingDesc'),
       image: 'https://images.pexels.com/photos/3756766/pexels-photo-3756766.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
@@ -380,7 +412,7 @@ const Projects: React.FC = () => {
       github: '#',
     },
     {
-      id: 5,
+      id: 8,
       title: t('aiContentGenerator'),
       description: t('aiContentDesc'),
       image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
@@ -389,7 +421,7 @@ const Projects: React.FC = () => {
       github: '#',
     },
     {
-      id: 6,
+      id: 9,
       title: t('portfolioWebsite'),
       description: t('portfolioDesc'),
       image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
