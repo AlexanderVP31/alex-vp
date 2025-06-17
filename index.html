@@ -1,11 +1,28 @@
 <!doctype html>
 <html lang="en">
-    <head>
+  <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/alex-vp/favicon.ico" />
-    <link rel="apple-touch-icon" href="/alex-vp/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="/alex-vp/android-chrome-192x192.png" />
+    
+    <!-- Favicons dinámicos -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/alex-vp/logo/android-chrome-192x192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/alex-vp/logo/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="/alex-vp/logo/favicon.ico" />
+
+    <!-- Fuente personalizada -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- Configuración para responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Título de la pestaña -->
     <title>Alex ° Creative Developer</title>
+
+    <script>
+      // Inyecta BASE_URL globalmente
+      window.BASE_URL = '<%= import.meta.env.BASE_URL %>';
+    </script>
   </head>
   <body>
     <div id="root"></div>
