@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-import facImage from '../../assets/fac.png';
+import facImage from '../../assets/img/fac.png';
 
 const Avatar: React.FC = () => {
   const avatarRef = useRef<HTMLDivElement>(null);
