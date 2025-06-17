@@ -352,7 +352,7 @@ const Projects: React.FC = () => {
       id: 1,
       title: t('adminDashboardsPlatform'),
       description: t('adminDashboardsDesc'),
-      image: AdminDashboards,
+      video: AdminDashboards,
       tags: ['Angular', 'Java','Spring Boot','Sql Server', 'Power BI Desktop'],
       link: 'https://actours.com.pe/acadmin/login',
       github: 'https://github.com/avmkui/admin_reportes',
