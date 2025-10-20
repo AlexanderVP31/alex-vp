@@ -42,14 +42,14 @@ const TechStack: React.FC = () => {
       initial={{ opacity: 0, x: direction === 'left' ? -50 : 50 }}
       animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: direction === 'left' ? -50 : 50 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="tech-bubble group flex-shrink-0"
+      className="flex-shrink-0 tech-bubble group"
       whileHover={{ scale: 1.1, y: -5 }}
     >
-      <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gray-800/50 border border-gray-700 flex items-center justify-center p-3 transition-all duration-300 group-hover:border-primary-400 group-hover:shadow-glow group-hover:bg-gray-700/50">
+      <div className="flex items-center justify-center w-16 h-16 p-3 transition-all duration-300 border border-gray-700 rounded-full md:w-20 md:h-20 bg-gray-800/50 group-hover:border-primary-400 group-hover:shadow-glow group-hover:bg-gray-700/50">
         <img 
           src={tech.icon} 
           alt={tech.name}
-          className="w-full h-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300"
+          className="object-contain w-full h-full transition-all duration-300 filter brightness-90 group-hover:brightness-110"
           onError={(e) => {
             // Fallback en caso de que la imagen no cargue
             e.currentTarget.style.display = 'none';
@@ -57,7 +57,7 @@ const TechStack: React.FC = () => {
           }}
         />
       </div>
-      <span className="text-xs font-medium text-gray-400 group-hover:text-primary-400 transition-colors duration-300 mt-2 text-center">
+      <span className="mt-2 text-xs font-medium text-center text-gray-400 transition-colors duration-300 group-hover:text-primary-400">
         {tech.name}
       </span>
     </motion.div>
@@ -80,23 +80,23 @@ const TechStack: React.FC = () => {
   );
 
   return (
-    <section className="py-20 relative bg-gradient-to-b from-surface to-background overflow-hidden" ref={ref}>
-      <div className="absolute inset-0 bg-gradient-to-r from-primary-400/5 to-secondary-400/5 opacity-50"></div>
+    <section className="relative w-full py-20 overflow-hidden bg-gradient-to-b from-surface to-background" ref={ref}>
+      <div className="absolute inset-0 opacity-50 bg-gradient-to-r from-primary-400/5 to-secondary-400/5"></div>
       
-      <div className="container mx-auto px-4 md:px-6 relative z-10">
+      <div className="container relative z-10 px-4 mx-auto md:px-6">
         <motion.div 
-          className="text-center mb-16"
+          className="mb-16 text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('techStack')}</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <h2 className="mb-4 text-3xl font-bold md:text-4xl">{t('techStack')}</h2>
+          <p className="max-w-2xl mx-auto text-gray-400">
             {t('techStackDescription')}
           </p>
         </motion.div>
 
-        <div className="space-y-16 max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto space-y-16">
           {/* Frontend Row */}
           <motion.div 
             className="text-center"
@@ -104,7 +104,7 @@ const TechStack: React.FC = () => {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-2xl font-semibold mb-8 gradient-text">{t('frontend')}</h3>
+            <h3 className="mb-8 text-2xl font-semibold gradient-text">{t('frontend')}</h3>
             <ScrollingRow techs={frontendTechs} direction="left" speed="slow" />
           </motion.div>
 
@@ -115,7 +115,7 @@ const TechStack: React.FC = () => {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-2xl font-semibold mb-8 gradient-text">{t('backend')}</h3>
+            <h3 className="mb-8 text-2xl font-semibold gradient-text">{t('backend')}</h3>
             <ScrollingRow techs={backendTechs} direction="right" speed="medium" />
           </motion.div>
         </div>

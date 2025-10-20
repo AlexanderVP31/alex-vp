@@ -73,6 +73,8 @@ export const translations = {
     backgroundMusic: 'Música de Fondo',
     
     // Projects Data
+    emergenciasPlatform: 'Plataforma de Emergencias',
+    emergenciasDesc: 'Una plataforma eficiente para gestionar y visualizar informes de emergencias de manera clara y precisa.',
     adminDashboardsPlatform:'Paneles de administración',
     adminDashboardsDesc: 'Una plataforma de paneles de administración con informes interactivos y análisis de datos.',
     provedorPlatform: 'Plataforma de Proveedor',
@@ -167,6 +169,8 @@ export const translations = {
     backgroundMusic: 'Background Music',
     
     // Projects Data
+    emergenciasPlatform: 'Emergency Platform',
+    emergenciasDesc: 'An efficient platform to manage and visualize emergency reports clearly and precisely.',
     adminDashboardsPlatform:'Admin Dashboards',
     adminDashboardsDesc: 'A management dashboard platform with interactive reports and data analysis.',
     provedorPlatform: 'Supplier Platform',
@@ -257,7 +261,8 @@ export const translations = {
     backgroundMusic: 'Musique de Fond',
     
     // Projects Data
-    
+    emergenciasPlatform: 'Plateforme d\'Urgences',
+    emergenciasDesc: 'Une plateforme efficace pour gérer et visualiser les rapports d\'urgence de manière claire et précise.',
     adminDashboardsPlatform:'Panneaux dadministration',
     adminDashboardsDesc: 'Une plateforme de tableau de bord de gestion avec des rapports interactifs et des analyses de données.',
     provedorPlatform: 'Plate-forme des fournisseurs',
@@ -348,6 +353,8 @@ export const translations = {
     backgroundMusic: 'Hintergrundmusik',
     
     // Projects Data
+    emergenciasPlatform: 'Notfallplattform',
+    emergenciasDesc: 'Eine effiziente Plattform zur Verwaltung und Visualisierung von Notfallberichten auf klare und präzise Weise.',
     adminDashboardsPlatform:'Management-Dashboards',
     adminDashboardsDesc: 'Eine Dashboard-Plattform für die Verwaltung mit interaktiven Berichten und Datenanalysen.',
     provedorPlatform: 'Anbieter-Plattform',
@@ -438,6 +445,8 @@ export const translations = {
     backgroundMusic: 'Musica di Sottofondo',
     
     // Projects Data
+    emergenciasPlatform: 'Piattaforma di Emergenze',
+    emergenciasDesc: 'Una piattaforma efficiente per gestire e visualizzare i rapporti di emergenza in modo chiaro e preciso.',
     adminDashboardsPlatform:'Pannelli di amministrazione',
     adminDashboardsDesc: 'Una piattaforma di dashboard gestionale con report interattivi e analisi dei dati.',
     provedorPlatform: 'Piattaforma dei fornitori',
@@ -528,6 +537,8 @@ export const translations = {
     backgroundMusic: 'Música de Fundo',
     
     // Projects Data
+    emergenciasPlatform: 'Plataforma de Emergências',
+    emergenciasDesc: 'Uma plataforma eficiente para gerenciar e visualizar relatórios de emergência de forma clara e precisa.',
     adminDashboardsPlatform:'Painéis de controlo de gestão',
     adminDashboardsDesc: 'Uma plataforma de painéis de administração com relatórios interactivos e análise de dados.',
     provedorPlatform: 'Plataforma do fornecedor',

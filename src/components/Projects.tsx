@@ -11,9 +11,9 @@ import { useTranslation } from '../hooks/useTranslation';
 import ReactDOM from 'react-dom';
 
 // Importa tus assets de video aquí
+import Proyectoemergencias from '../assets/video/Proyectoemergencias.mp4';
 import AdminDashboards from '../assets/video/AdminDashboards.mp4';
 import DocumentoDigitalVideo from '../assets/video/DocumentoDigital.mp4';
-//import OePromartVideo from '../assets/video/OePromartVideo.mp4';
 import SeguroVideo from '../assets/video/SeguroVideo.mp4';
 import MowaVideo from '../assets/video/MowaVideo.mp4';
 //import MowaVideo from 'https://www.youtube.com/watch?v=o03dByzxbXo';
@@ -98,7 +98,7 @@ const CustomVideoPlayer = ({ src, title, onFullscreen }) => {
         loop
         muted={isMuted}
         playsInline
-        className="w-full h-full object-cover transition-transform duration-500"
+        className="object-cover w-full h-full transition-transform duration-500"
         onClick={togglePlay}
         onTimeUpdate={updateProgress}
         onEnded={() => setIsPlaying(false)}
@@ -117,11 +117,11 @@ const CustomVideoPlayer = ({ src, title, onFullscreen }) => {
       >
         {/* Barra de progreso */}
         <div 
-          className="h-1 w-full bg-gray-600 mb-3 rounded-full cursor-pointer"
+          className="w-full h-1 mb-3 bg-gray-600 rounded-full cursor-pointer"
           onClick={handleProgressClick}
         >
           <div 
-            className="h-full bg-primary-400 rounded-full"
+            className="h-full rounded-full bg-primary-400"
             style={{ width: `${progress}%` }}
           ></div>
         </div>
@@ -131,7 +131,7 @@ const CustomVideoPlayer = ({ src, title, onFullscreen }) => {
           <div className="flex gap-3">
             <button 
               onClick={togglePlay}
-              className="text-white hover:text-primary-400 transition-colors"
+              className="text-white transition-colors hover:text-primary-400"
               aria-label={isPlaying ? "Pausar" : "Reproducir"}
             >
               {isPlaying ? <Pause size={20} /> : <Play size={20} />}
@@ -139,13 +139,13 @@ const CustomVideoPlayer = ({ src, title, onFullscreen }) => {
             
             <button 
               onClick={toggleMute}
-              className="text-white hover:text-primary-400 transition-colors"
+              className="text-white transition-colors hover:text-primary-400"
               aria-label={isMuted ? "Activar sonido" : "Silenciar"}
             >
               {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
             </button>
             
-            <div className="text-white text-sm ml-2">
+            <div className="ml-2 text-sm text-white">
               {Math.floor(videoRef.current?.currentTime || 0)}s
             </div>
           </div>
@@ -153,7 +153,7 @@ const CustomVideoPlayer = ({ src, title, onFullscreen }) => {
           <div className="flex gap-3">
             <button 
               onClick={() => onFullscreen(src, title)}
-              className="text-white hover:text-primary-400 transition-colors"
+              className="text-white transition-colors hover:text-primary-400"
               aria-label="Pantalla completa"
             >
               <Maximize2 size={20} />
@@ -164,7 +164,7 @@ const CustomVideoPlayer = ({ src, title, onFullscreen }) => {
       
       {/* Indicador de reproducción cuando los controles están ocultos */}
       {isHovering && !showControls && !isPlaying && (
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-black/50 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+        <div className="absolute flex items-center justify-center w-16 h-16 transition-opacity transform -translate-x-1/2 -translate-y-1/2 rounded-full opacity-0 top-1/2 left-1/2 bg-black/50 group-hover:opacity-100">
           <Play size={30} className="text-white opacity-70" />
         </div>
       )}
@@ -250,10 +250,10 @@ const FullscreenVideoPortal = ({ src, title, onClose }) => {
   
   return ReactDOM.createPortal(
     <div className="fixed inset-0 bg-black z-[1000] flex items-center justify-center p-4">
-      <div className="absolute top-6 right-6 z-10 flex gap-4">
+      <div className="absolute z-10 flex gap-4 top-6 right-6">
         <button 
           onClick={toggleMute}
-          className="text-white hover:text-primary-400 transition-colors"
+          className="text-white transition-colors hover:text-primary-400"
           aria-label={isMuted ? "Activar sonido" : "Silenciar"}
         >
           {isMuted ? <VolumeX size={24} /> : <Volume2 size={24} />}
@@ -261,21 +261,21 @@ const FullscreenVideoPortal = ({ src, title, onClose }) => {
         
         <button 
           onClick={onClose}
-          className="text-white hover:text-primary-400 transition-colors"
+          className="text-white transition-colors hover:text-primary-400"
           aria-label="Cerrar pantalla completa"
         >
           <X size={32} />
         </button>
       </div>
       
-      <div className="w-full max-w-4xl aspect-video bg-black rounded-lg overflow-hidden relative">
+      <div className="relative w-full max-w-4xl overflow-hidden bg-black rounded-lg aspect-video">
         <video
           ref={videoRef}
           autoPlay
           loop
           muted={isMuted}
           playsInline
-          className="w-full h-full object-cover"
+          className="object-cover w-full h-full"
           onTimeUpdate={updateProgress}
           onEnded={() => setIsPlaying(false)}
           onClick={togglePlay}
@@ -286,11 +286,11 @@ const FullscreenVideoPortal = ({ src, title, onClose }) => {
         
         {/* Botón de play/pause central */}
         <div 
-          className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center cursor-pointer"
+          className="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center cursor-pointer"
           onClick={togglePlay}
         >
           {!isPlaying && (
-            <div className="w-20 h-20 bg-black/50 rounded-full flex items-center justify-center">
+            <div className="flex items-center justify-center w-20 h-20 rounded-full bg-black/50">
               <Play size={40} className="text-white" />
             </div>
           )}
@@ -299,21 +299,21 @@ const FullscreenVideoPortal = ({ src, title, onClose }) => {
         {/* Barra de progreso */}
         <div 
           ref={progressBarRef}
-          className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4"
+          className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent"
         >
           <div 
-            className="h-2 w-full bg-gray-600 mb-3 rounded-full cursor-pointer"
+            className="w-full h-2 mb-3 bg-gray-600 rounded-full cursor-pointer"
             onClick={handleProgressClick}
           >
             <div 
-              className="h-full bg-primary-400 rounded-full"
+              className="h-full rounded-full bg-primary-400"
               style={{ width: `${progress}%` }}
             ></div>
           </div>
           
-          <div className="flex justify-between items-center">
-            <div className="text-white text-lg font-medium">{title}</div>
-            <div className="text-white text-sm">
+          <div className="flex items-center justify-between">
+            <div className="text-lg font-medium text-white">{title}</div>
+            <div className="text-sm text-white">
               {Math.floor(videoRef.current?.currentTime || 0)}s / {Math.floor(videoRef.current?.duration || 0)}s
             </div>
           </div>
@@ -326,11 +326,11 @@ const FullscreenVideoPortal = ({ src, title, onClose }) => {
 
 // Componente de Imagen
 const ImageDisplay = ({ src, alt }: { src: string; alt: string }) => (
-  <div className="relative overflow-hidden h-full">
+  <div className="relative h-full overflow-hidden">
     <img 
       src={src} 
       alt={alt}
-      className="w-full h-full object-cover transition-transform duration-500"
+      className="object-cover w-full h-full transition-transform duration-500"
       onError={(e) => {
         e.currentTarget.src = 'https://via.placeholder.com/600x400/1a1a2e/ffffff?text=Imagen+no+disponible';
       }}
@@ -348,6 +348,16 @@ const Projects: React.FC = () => {
   const [fullscreenVideo, setFullscreenVideo] = useState<{src: string; title: string} | null>(null);
 
   const projects = [
+    
+    {
+      id: 1,
+      title: t('emergenciasPlatform'),
+      description: t('emergenciasDesc'),
+      video: Proyectoemergencias,
+      tags: ['Angular','PrimeNG','Java','Spring Boot', 'Sql Server'],
+      link: 'https://actours.com.pe/adminemergencias/login',
+      github: 'https://github.com/avmkui/admin-emergencias.git',
+    },
     {
       id: 1,
       title: t('adminDashboardsPlatform'),
@@ -475,9 +485,9 @@ const Projects: React.FC = () => {
   };
   
   return (
-    <section 
-      id="projects" 
-      className="py-20 relative bg-gradient-to-b from-background to-surface"
+    <section
+      id="projects"
+      className="relative w-full py-20 bg-gradient-to-b from-background to-surface"
       ref={ref}
     >
       {/* Modal de video en pantalla completa usando Portal */}
@@ -489,15 +499,15 @@ const Projects: React.FC = () => {
         />
       )}
       
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container px-4 mx-auto md:px-6">
         <motion.div 
-          className="text-center mb-16"
+          className="mb-16 text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('myProjects')}</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <h2 className="mb-4 text-3xl font-bold md:text-4xl">{t('myProjects')}</h2>
+          <p className="max-w-2xl mx-auto text-gray-400">
             {t('projectsDescription')}
           </p>
         </motion.div>
@@ -506,7 +516,7 @@ const Projects: React.FC = () => {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="mt-10 relative"
+          className="relative mt-10"
         >
           <Swiper
             effect={'coverflow'}
@@ -523,6 +533,7 @@ const Projects: React.FC = () => {
             pagination={{ clickable: true }}
             modules={[EffectCoverflow, Pagination, Navigation]}
             className="mySwiper"
+            style={{ paddingBottom: '3rem' }}
             onSwiper={(swiper) => {
               swiperRef.current = swiper;
             }}
@@ -530,7 +541,7 @@ const Projects: React.FC = () => {
             {projects.map((project) => (
               <SwiperSlide key={project.id} style={{ width: '350px', height: '500px' }}>
                 <motion.div 
-                  className="project-card h-full flex flex-col bg-gray-900 rounded-xl overflow-hidden shadow-xl"
+                  className="flex flex-col h-full overflow-hidden bg-gray-900 shadow-xl project-card rounded-xl"
                   variants={itemVariants}
                   whileHover={{ y: -5, transition: { duration: 0.2 } }}
                 >
@@ -546,34 +557,33 @@ const Projects: React.FC = () => {
                     )}
                   </div>
                   
-                  <div className="p-6 flex-1 flex flex-col">
-                    <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                    <p className="text-gray-400 mb-4 flex-1">{project.description}</p>
-                    
+                  <div className="flex flex-col flex-1 p-6">
+                    <h3 className="mb-2 text-xl font-bold">{project.title}</h3>
+                    <p className="flex-1 mb-4 text-gray-400">{project.description}</p>
+
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.tags.map((tag, index) => (
-                        <span 
-                          key={index} 
-                          className="px-3 py-1 text-xs rounded-full bg-gray-800 text-gray-300"
+                        <span
+                          key={index}
+                          className="px-3 py-1 text-xs text-gray-300 bg-gray-800 rounded-full"
                         >
                           {tag}
                         </span>
                       ))}
                     </div>
-                    
-                    <div className="flex justify-between mt-auto">
-                      <a 
-                        href={project.link} 
-                        className="flex items-center text-sm text-primary-400 hover:text-primary-300 transition-colors"
+                    <div className="flex justify-between p-4 bg-gray-800/50">
+                      <a
+                        href={project.link}
+                        className="flex items-center text-sm transition-colors text-primary-400 hover:text-primary-300"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         <ExternalLink className="w-4 h-4 mr-1" />
                         {t('liveDemo')}
                       </a>
-                      <a 
-                        href={project.github} 
-                        className="flex items-center text-sm text-gray-400 hover:text-gray-300 transition-colors"
+                      <a
+                        href={project.github}
+                        className="flex items-center text-sm text-gray-400 transition-colors hover:text-gray-300"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -581,7 +591,9 @@ const Projects: React.FC = () => {
                         {t('sourceCode')}
                       </a>
                     </div>
+
                   </div>
+                  
                 </motion.div>
               </SwiperSlide>
             ))}
@@ -590,14 +602,14 @@ const Projects: React.FC = () => {
           <div className="flex justify-center gap-4 mt-8">
             <button
               onClick={handlePrevClick}
-              className="w-12 h-12 rounded-full bg-gray-800 hover:bg-primary-400 transition-colors flex items-center justify-center text-white"
+              className="flex items-center justify-center w-12 h-12 text-white transition-colors bg-gray-800 rounded-full hover:bg-primary-400"
               aria-label="Previous project"
             >
               <ArrowLeft className="w-6 h-6" />
             </button>
             <button
               onClick={handleNextClick}
-              className="w-12 h-12 rounded-full bg-gray-800 hover:bg-primary-400 transition-colors flex items-center justify-center text-white"
+              className="flex items-center justify-center w-12 h-12 text-white transition-colors bg-gray-800 rounded-full hover:bg-primary-400"
               aria-label="Next project"
             >
               <ArrowRight className="w-6 h-6" />

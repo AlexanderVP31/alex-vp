@@ -92,29 +92,29 @@ const Contact: React.FC = () => {
   ];
   
   return (
-    <section id="contact" className="py-20 relative bg-gradient-to-b from-surface to-background" ref={ref}>
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="contact" className="relative w-full py-20 bg-gradient-to-b from-surface to-background" ref={ref}>
+      <div className="container px-4 mx-auto md:px-6">
         <motion.div 
-          className="text-center mb-16"
+          className="mb-16 text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('contactTitle')}</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <h2 className="mb-4 text-3xl font-bold md:text-4xl">{t('contactTitle')}</h2>
+          <p className="max-w-2xl mx-auto text-gray-400">
             {t('contactDescription')}
           </p>
         </motion.div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-5">
           <motion.div 
-            className="lg:col-span-2 space-y-8"
+            className="space-y-8 lg:col-span-2"
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="bg-gray-800/30 rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-6">{t('contactInformation')}</h3>
+            <div className="p-6 rounded-lg bg-gray-800/30">
+              <h3 className="mb-6 text-xl font-semibold">{t('contactInformation')}</h3>
               <div className="space-y-6">
                 {contactMethods.map((method, index) => (
                   <motion.a
@@ -126,7 +126,7 @@ const Contact: React.FC = () => {
                     whileHover={{ x: 5 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <div className="mt-1 text-primary-400 group-hover:text-primary-300 transition-colors">
+                    <div className="mt-1 transition-colors text-primary-400 group-hover:text-primary-300">
                       {method.icon}
                     </div>
                     <div>
@@ -138,9 +138,9 @@ const Contact: React.FC = () => {
               </div>
             </div>
             
-            <div className="bg-gray-800/30 rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">{t('connectWithMe')}</h3>
-              <p className="text-gray-400 mb-4">
+            <div className="p-6 rounded-lg bg-gray-800/30">
+              <h3 className="mb-4 text-xl font-semibold">{t('connectWithMe')}</h3>
+              <p className="mb-4 text-gray-400">
                 {t('connectDescription')}
               </p>
               <div className="flex gap-4">
@@ -148,7 +148,7 @@ const Contact: React.FC = () => {
                   href="https://facebook.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 hover:bg-primary-400 hover:text-white transition-colors"
+                  className="flex items-center justify-center w-10 h-10 text-gray-300 transition-colors bg-gray-800 rounded-full hover:bg-primary-400 hover:text-white"
                   aria-label="Facebook"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -159,7 +159,7 @@ const Contact: React.FC = () => {
                   href="https://www.linkedin.com/in/alexander-miguel-valverde-pireta-8a9421180" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 hover:bg-primary-400 hover:text-white transition-colors"
+                  className="flex items-center justify-center w-10 h-10 text-gray-300 transition-colors bg-gray-800 rounded-full hover:bg-primary-400 hover:text-white"
                   aria-label="LinkedIn"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -171,7 +171,7 @@ const Contact: React.FC = () => {
                   href="https://discord.com/users/AMAKUI#3423" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 hover:bg-primary-400 hover:text-white transition-colors"
+                  className="flex items-center justify-center w-10 h-10 text-gray-300 transition-colors bg-gray-800 rounded-full hover:bg-primary-400 hover:text-white"
                   aria-label="Discord"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -183,7 +183,7 @@ const Contact: React.FC = () => {
                   href="https://github.com/AlexanderVP31" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 hover:bg-primary-400 hover:text-white transition-colors"
+                  className="flex items-center justify-center w-10 h-10 text-gray-300 transition-colors bg-gray-800 rounded-full hover:bg-primary-400 hover:text-white"
                   aria-label="GitHub"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -195,7 +195,7 @@ const Contact: React.FC = () => {
                   href="https://github.com/avmkui" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 hover:bg-primary-400 hover:text-white transition-colors"
+                  className="flex items-center justify-center w-10 h-10 text-gray-300 transition-colors bg-gray-800 rounded-full hover:bg-primary-400 hover:text-white"
                   aria-label="GitHub"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -206,7 +206,7 @@ const Contact: React.FC = () => {
                   href="https://wa.me/51912285221?text=Hola%20Alexander,%20me%20interesa%20contactarte" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 hover:bg-green-500 hover:text-white transition-colors"
+                  className="flex items-center justify-center w-10 h-10 text-gray-300 transition-colors bg-gray-800 rounded-full hover:bg-green-500 hover:text-white"
                   aria-label="WhatsApp"
                 >
                   <MessageCircle className="w-5 h-5" />
@@ -221,12 +221,12 @@ const Contact: React.FC = () => {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="bg-gray-800/30 rounded-lg p-6 md:p-8">
-              <h3 className="text-xl font-semibold mb-6">{t('sendMessage')}</h3>
+            <div className="p-6 rounded-lg bg-gray-800/30 md:p-8">
+              <h3 className="mb-6 text-xl font-semibold">{t('sendMessage')}</h3>
               
               {isSubmitted ? (
                 <motion.div 
-                  className="bg-accent-400/20 border border-accent-400/30 rounded-lg p-4 text-accent-400"
+                  className="p-4 border rounded-lg bg-accent-400/20 border-accent-400/30 text-accent-400"
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3 }}
@@ -238,7 +238,7 @@ const Contact: React.FC = () => {
                 <>
                   {submitError && (
                     <motion.div 
-                      className="bg-red-500/20 border border-red-500/30 rounded-lg p-4 text-red-400 mb-6"
+                      className="p-4 mb-6 text-red-400 border rounded-lg bg-red-500/20 border-red-500/30"
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.3 }}
@@ -247,8 +247,8 @@ const Contact: React.FC = () => {
                     </motion.div>
                   )}
                   
-                  {/* <div className="bg-blue-500/20 border border-blue-500/30 rounded-lg p-4 text-blue-400 mb-6">
-                    <p className="text-sm font-medium mb-2">📧 Configuración de EmailJS requerida</p>
+                  {/* <div className="p-4 mb-6 text-blue-400 border rounded-lg bg-blue-500/20 border-blue-500/30">
+                    <p className="mb-2 text-sm font-medium">📧 Configuración de EmailJS requerida</p>
                     <p className="text-xs">
                       Para que el formulario funcione, necesitas configurar EmailJS:
                       <br />1. Crea una cuenta en <a href="https://emailjs.com" target="_blank" rel="noopener noreferrer" className="underline">emailjs.com</a>
@@ -259,9 +259,9 @@ const Contact: React.FC = () => {
                   </div> */}
                   
                   <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                       <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">{t('name')}</label>
+                        <label htmlFor="name" className="block mb-1 text-sm font-medium text-gray-300">{t('name')}</label>
                         <input
                           type="text"
                           id="name"
@@ -269,11 +269,11 @@ const Contact: React.FC = () => {
                           value={formData.name}
                           onChange={handleChange}
                           required
-                          className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent transition-colors"
+                          className="w-full px-4 py-3 transition-colors bg-gray-900 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent"
                         />
                       </div>
                       <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">{t('email')}</label>
+                        <label htmlFor="email" className="block mb-1 text-sm font-medium text-gray-300">{t('email')}</label>
                         <input
                           type="email"
                           id="email"
@@ -281,13 +281,13 @@ const Contact: React.FC = () => {
                           value={formData.email}
                           onChange={handleChange}
                           required
-                          className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent transition-colors"
+                          className="w-full px-4 py-3 transition-colors bg-gray-900 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent"
                         />
                       </div>
                     </div>
                     
                     <div>
-                      <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-1">{t('subject')}</label>
+                      <label htmlFor="subject" className="block mb-1 text-sm font-medium text-gray-300">{t('subject')}</label>
                       <input
                         type="text"
                         id="subject"
@@ -295,12 +295,12 @@ const Contact: React.FC = () => {
                         value={formData.subject}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent transition-colors"
+                        className="w-full px-4 py-3 transition-colors bg-gray-900 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent"
                       />
                     </div>
                     
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-1">{t('message')}</label>
+                      <label htmlFor="message" className="block mb-1 text-sm font-medium text-gray-300">{t('message')}</label>
                       <textarea
                         id="message"
                         name="message"
@@ -308,7 +308,7 @@ const Contact: React.FC = () => {
                         value={formData.message}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent transition-colors resize-none"
+                        className="w-full px-4 py-3 transition-colors bg-gray-900 border border-gray-700 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent"
                       />
                     </div>
                     
