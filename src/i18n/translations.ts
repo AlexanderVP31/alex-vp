@@ -71,6 +71,14 @@ export const translations = {
     // Music Player
     nowPlaying: 'Reproduciendo Ahora',
     backgroundMusic: 'Música de Fondo',
+    playlist: 'Lista de Reproducción',
+    shuffle: 'Aleatorio',
+    repeat: 'Repetir',
+    repeatOne: 'Repetir Una',
+    previous: 'Anterior',
+    next: 'Siguiente',
+    track: 'Pista',
+    of: 'de',
     
     // Projects Data
     emergenciasPlatform: 'Plataforma de Emergencias',
@@ -81,6 +89,8 @@ export const translations = {
     provedorDesc: 'Una plataforma eficaz para cargar, gestionar y visualizar diversos comprobantes electrónicos.',
     // oepromarPlatform: '',
     // oepromarDesc: '',
+    licenciasPlatform: 'Plataforma para gestionar Licencias',
+    licenciasDesc: 'Este proyecto tiene como objetivo digitalizar y gestionar el proceso de emisión, renovación y control de licencias municipales.',
     seguroPlatform: 'Plataforma de Seguros',
     seguroDesc: 'Cotizar El Seguro Vida Ley es un seguro de vida que brinda coberturas por muerte natural, muerte accidental, invalidez total y permanente por accidente a tus trabajadores, que además contempla beneficios para sus familiares.',
     mowaPlatform: 'Gestiona y Comunica con Efectividad',
@@ -167,6 +177,14 @@ export const translations = {
     // Music Player
     nowPlaying: 'Now Playing',
     backgroundMusic: 'Background Music',
+    playlist: 'Playlist',
+    shuffle: 'Shuffle',
+    repeat: 'Repeat',
+    repeatOne: 'Repeat One',
+    previous: 'Previous',
+    next: 'Next',
+    track: 'Track',
+    of: 'of',
     
     // Projects Data
     emergenciasPlatform: 'Emergency Platform',
@@ -177,6 +195,8 @@ export const translations = {
     provedorDesc: 'An efficient platform for uploading, managing, and viewing various electronic receipts.',
     // oepromarPlatform: '',
     // oepromarDesc: '',
+    licenciasPlatform: 'License Management Platform',
+    licenciasDesc: 'This project aims to digitize and manage the process of issuing, renewing, and controlling municipal licenses (operating, building, etc.).',
     seguroPlatform: 'Insurance Platform',
     seguroDesc: 'Quote The Life Insurance Law is a life insurance that provides coverage for natural death, accidental death, total and permanent disability due to accident to your employees, which also includes benefits for their families.',
     mowaPlatform: 'Manage and Communicate Effectively',
@@ -259,6 +279,14 @@ export const translations = {
     // Music Player
     nowPlaying: 'En Cours de Lecture',
     backgroundMusic: 'Musique de Fond',
+    playlist: 'Liste de Lecture',
+    shuffle: 'Aléatoire',
+    repeat: 'Répéter',
+    repeatOne: 'Répéter Une',
+    previous: 'Précédent',
+    next: 'Suivant',
+    track: 'Piste',
+    of: 'de',
     
     // Projects Data
     emergenciasPlatform: 'Plateforme d\'Urgences',
@@ -269,6 +297,8 @@ export const translations = {
     provedorDesc: 'Une plateforme efficace pour télécharger, gérer et visualiser divers reçus électroniques.',
     // oepromarPlatform: '',
     // oepromarDesc: '',
+    licenciasPlatform: 'Plateforme de Gestion des Licences',
+    licenciasDesc: 'Ce projet vise à numériser et gérer le processus d\'émission, de renouvellement et de contrôle des licences municipales.',
     seguroPlatform: 'Plate-forme dassurance',
     seguroDesc: 'Devis La loi sur lassurance-vie est une assurance-vie qui offre une couverture en cas de décès naturel, de décès accidentel, dinvalidité totale et permanente due à un accident à vos travailleurs, et qui prévoit également des prestations pour leurs familles.',
     mowaPlatform: 'Gérer et communiquer efficacement',
@@ -351,6 +381,14 @@ export const translations = {
     // Music Player
     nowPlaying: 'Jetzt Läuft',
     backgroundMusic: 'Hintergrundmusik',
+    playlist: 'Wiedergabeliste',
+    shuffle: 'Zufällig',
+    repeat: 'Wiederholen',
+    repeatOne: 'Eins Wiederholen',
+    previous: 'Vorherige',
+    next: 'Nächste',
+    track: 'Track',
+    of: 'von',
     
     // Projects Data
     emergenciasPlatform: 'Notfallplattform',
@@ -361,6 +399,8 @@ export const translations = {
     provedorDesc: 'Eine effiziente Plattform zum Hochladen, Verwalten und Anzeigen verschiedener elektronischer Belege.',
     // oepromarPlatform: '',
     // oepromarDesc: '',
+    licenciasPlatform: 'Lizenzverwaltungsplattform',
+    licenciasDesc: 'Dieses Projekt zielt darauf ab, den Prozess der Ausstellung, Verlängerung und Kontrolle von kommunalen Lizenzen.',
     seguroPlatform: 'Plattform für Versicherungen',
     seguroDesc: 'Zitat Das Lebensversicherungsgesetz ist eine Lebensversicherung, die Ihren Arbeitnehmern eine Deckung für natürlichen Tod, Unfalltod, vollständige und dauerhafte Invalidität aufgrund eines Unfalls bietet, die auch Leistungen für ihre Familien vorsieht.',
     mowaPlatform: 'Effektiv verwalten und kommunizieren',
@@ -443,6 +483,14 @@ export const translations = {
     // Music Player
     nowPlaying: 'In Riproduzione',
     backgroundMusic: 'Musica di Sottofondo',
+    playlist: 'Playlist',
+    shuffle: 'Shuffle',
+    repeat: 'Ripeti',
+    repeatOne: 'Ripeti Una',
+    previous: 'Precedente',
+    next: 'Successivo',
+    track: 'Traccia',
+    of: 'di',
     
     // Projects Data
     emergenciasPlatform: 'Piattaforma di Emergenze',
@@ -453,6 +501,8 @@ export const translations = {
     provedorDesc: 'Una piattaforma efficiente per caricare, gestire e visualizzare varie ricevute elettroniche.',
     // oepromarPlatform: '',
     // oepromarDesc: '',
+    licenciasPlatform: 'Piattaforma di Gestione Licenze',
+    licenciasDesc: 'Questo progetto mira a digitalizzare e gestire il processo di emissione, rinnovo e controllo delle licenze comunali.',
     seguroPlatform: 'Piattaforma assicurativa',
     seguroDesc: 'Preventivo Lassicurazione sulla vita è unassicurazione sulla vita che fornisce una copertura per morte naturale, morte accidentale, invalidità totale e permanente dovuta a infortunio ai vostri lavoratori, che prevede anche prestazioni per le loro famiglie.',
     mowaPlatform: 'Gestire e comunicare in modo efficace',
@@ -535,6 +585,14 @@ export const translations = {
     // Music Player
     nowPlaying: 'Tocando Agora',
     backgroundMusic: 'Música de Fundo',
+    playlist: 'Lista de Reprodução',
+    shuffle: 'Aleatório',
+    repeat: 'Repetir',
+    repeatOne: 'Repetir Uma',
+    previous: 'Anterior',
+    next: 'Seguinte',
+    track: 'Faixa',
+    of: 'de',
     
     // Projects Data
     emergenciasPlatform: 'Plataforma de Emergências',
@@ -545,6 +603,8 @@ export const translations = {
     provedorDesc: 'Uma plataforma eficiente para carregar, gerir e visualizar vários recibos electrónicos.',
     // oepromarPlatform: '',
     // oepromarDesc: '',
+    licenciasPlatform: 'Plataforma de Gestão de Licenças',
+    licenciasDesc: 'Este projeto visa digitalizar e gerir o processo de emissão, renovação e controlo de licenças municipais.',
     seguroPlatform: 'Plataforma de seguros',
     seguroDesc: 'Cotação A Lei do Seguro de Vida é um seguro de vida que oferece cobertura para morte natural, morte acidental, invalidez total e permanente por acidente para seus funcionários, além de oferecer benefícios para suas famílias.',
     mowaPlatform: 'Gerir e comunicar eficazmente',

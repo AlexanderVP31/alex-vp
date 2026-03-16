@@ -4,7 +4,7 @@ import { useTranslation } from '../hooks/useTranslation';
 
 const TechStack: React.FC = () => {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: false, amount: 0.2 });
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
   const { t } = useTranslation();
 
   const frontendTechs = [

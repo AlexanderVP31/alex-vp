@@ -9,12 +9,9 @@ import Footer from './components/Footer';
 import CustomCursor from './components/ui/CustomCursor';
 import MusicPlayer from './components/MusicPlayer';
 import NoiseTexture from './components/ui/NoiseTexture';
-import { useAudioStore } from './store/audioStore';
 import TechStack from './components/TechStack';
 
 function App() {
-  const { isPlaying } = useAudioStore();
-
   return (
     <AnimatePresence mode="wait">
       <motion.div
@@ -29,20 +26,14 @@ function App() {
         <Navbar />
         <MusicPlayer />
         
-        <motion.div
-          className={`transition-all duration-500 ${
-            isPlaying ? 'scale-[1.02]' : 'scale-100'
-          }`}
-        >
-          <main>
-            <Hero />
-            <Projects />
-            <About />
-            <Contact />
-            <TechStack />
-          </main>
-          <Footer />
-        </motion.div>
+        <main>
+          <Hero />
+          <Projects />
+          <About />
+          <Contact />
+          <TechStack />
+        </main>
+        <Footer />
       </motion.div>
     </AnimatePresence>
   );

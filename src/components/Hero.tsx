@@ -120,7 +120,7 @@ const Hero: React.FC = () => {
                   ref={logoRef}
                   src={LogoSinFondo}
                   alt="Logo"
-                  className="inline-block w-15 h-15"
+                  className="inline-block w-15 h-15 levitate"
                   loading="lazy"
                   animate={{ rotate: 360 }}
                   transition={{ duration: 10, repeat: Infinity, ease: "linear" }}

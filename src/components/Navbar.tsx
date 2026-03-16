@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Music } from 'lucide-react';
-import { useAudioStore } from '../store/audioStore';
+import { Menu, X } from 'lucide-react';
 import { useTranslation } from '../hooks/useTranslation';
 import LanguageSelector from './ui/LanguageSelector';
+import MusicButton from './ui/MusicButton';
 
 import LogoSinFondo from '../assets/logo/iconsinfondo.png';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { togglePlay, isPlaying } = useAudioStore();
   const { t } = useTranslation();
 
   const navLinks = [
@@ -53,7 +52,7 @@ const Navbar: React.FC = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/90 backdrop-blur-md py-3 shadow-md' : 'bg-transparent py-5'
         }`}
     >
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container px-4 mx-auto md:px-6">
         <div className="flex items-center justify-between">
 
           {/* Logo + AVP juntos */}
@@ -77,7 +76,7 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="items-center hidden space-x-8 md:flex">
             {navLinks.map((link) => (
               <a
                 key={link.title}
@@ -92,31 +91,15 @@ const Navbar: React.FC = () => {
               </a>
             ))}
             <LanguageSelector />
-            <motion.button
-              className="flex items-center justify-center w-10 h-10 rounded-full bg-surface hover:bg-gray-800 transition-colors"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={togglePlay}
-              aria-label={isPlaying ? "Pause music" : "Play music"}
-            >
-              <Music className={`w-5 h-5 ${isPlaying ? 'text-primary-400' : 'text-gray-300'}`} />
-            </motion.button>
+            <MusicButton />
           </nav>
 
           {/* Mobile menu button */}
           <div className="flex items-center space-x-4 md:hidden">
             <LanguageSelector className="scale-90" />
+            <MusicButton />
             <motion.button
-              className="flex items-center justify-center w-10 h-10 rounded-full bg-surface hover:bg-gray-800 transition-colors"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={togglePlay}
-              aria-label={isPlaying ? "Pause music" : "Play music"}
-            >
-              <Music className={`w-5 h-5 ${isPlaying ? 'text-primary-400' : 'text-gray-300'}`} />
-            </motion.button>
-            <motion.button
-              className="flex items-center justify-center w-10 h-10 rounded-full bg-surface hover:bg-gray-800 transition-colors"
+              className="flex items-center justify-center w-10 h-10 transition-colors rounded-full bg-surface hover:bg-gray-800"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={() => setMobileMenuOpen(true)}
@@ -133,16 +116,16 @@ const Navbar: React.FC = () => {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            className="fixed inset-0 bg-background z-50 flex flex-col"
+            className="fixed inset-0 z-50 flex flex-col bg-background"
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'tween', duration: 0.3 }}
           >
-            <div className="flex justify-between items-center p-4 border-b border-gray-800">
+            <div className="flex items-center justify-between p-4 border-b border-gray-800">
               <span className="text-xl font-bold gradient-text">PORTFOLIO</span>
               <motion.button
-                className="flex items-center justify-center w-10 h-10 rounded-full bg-surface hover:bg-gray-800 transition-colors"
+                className="flex items-center justify-center w-10 h-10 transition-colors rounded-full bg-surface hover:bg-gray-800"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={() => setMobileMenuOpen(false)}
@@ -151,12 +134,12 @@ const Navbar: React.FC = () => {
                 <X className="w-5 h-5" />
               </motion.button>
             </div>
-            <nav className="flex flex-col space-y-4 p-6">
+            <nav className="flex flex-col p-6 space-y-4">
               {navLinks.map((link, i) => (
                 <motion.a
                   key={link.title}
                   href={link.href}
-                  className="text-2xl font-medium py-2 px-4 hover:bg-surface rounded-md transition-colors"
+                  className="px-4 py-2 text-2xl font-medium transition-colors rounded-md hover:bg-surface"
                   onClick={(e) => {
                     e.preventDefault();
                     handleMobileNavClick(link.href);

@@ -275,3 +275,17 @@ video {
 .project-card:hover video {
   transform: scale(1.05);
 }
+
+/* Levitating animation for logo */
+@keyframes levitate {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.levitate {
+  animation: levitate 3s ease-in-out infinite;
+}

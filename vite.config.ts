@@ -3,8 +3,17 @@ import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/alex-vp/", 
+  base: "/alex-vp/",
   plugins: [react()],
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    rollupOptions: {
+      input: {
+        main: './index.html'
+      }
+    }
+  },
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
