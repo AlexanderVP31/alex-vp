@@ -12,7 +12,7 @@ import ReactDOM from 'react-dom';
 
 // Importa tus assets de video aquí
 
-
+import PortalReserva from '../assets/video/PortalReserva.mp4';
 import LicenciasHuancayo from '../assets/video/LicenciasHuancayo.mp4';
 import Proyectoemergencias from '../assets/video/Proyectoemergencias.mp4';
 import AdminDashboards from '../assets/video/AdminDashboards.mp4';
@@ -354,6 +354,15 @@ const Projects: React.FC = () => {
 
     {
       id: 1,
+      title: t('reservasPlatform'),
+      description: t('reservasDesc'),
+      video: PortalReserva,
+      tags: ['Angular','Tailwind','PrimeNG','Java','Spring Boot', 'Sql Server'],
+      link: '#',
+      github: 'https://github.com/avmkui/admin_reserva',
+    }, 
+    {
+      id: 2,
       title: t('licenciasPlatform'),
       description: t('licenciasDesc'),
       video: LicenciasHuancayo,
@@ -362,7 +371,7 @@ const Projects: React.FC = () => {
       github: 'https://github.com/AlexanderVP31/HUANCAYO',
     },    
     {
-      id: 2,
+      id: 3,
       title: t('emergenciasPlatform'),
       description: t('emergenciasDesc'),
       video: Proyectoemergencias,
@@ -371,7 +380,7 @@ const Projects: React.FC = () => {
       github: 'https://github.com/avmkui/admin-emergencias.git',
     },
     {
-      id: 3,
+      id: 4,
       title: t('adminDashboardsPlatform'),
       description: t('adminDashboardsDesc'),
       video: AdminDashboards,
@@ -380,7 +389,7 @@ const Projects: React.FC = () => {
       github: 'https://github.com/avmkui/admin_reportes',
     },
     {
-      id: 4,
+      id: 5,
       title: t('provedorPlatform'),
       description: t('provedorDesc'),
       video: DocumentoDigitalVideo,
@@ -398,7 +407,7 @@ const Projects: React.FC = () => {
     //   github: 'https://github.com/avmkui/app_proveedor',
     // },
     {
-      id: 5,
+      id: 6,
       title: t('seguroPlatform'),
       description: t('seguroDesc'),
       video: SeguroVideo,
@@ -407,7 +416,7 @@ const Projects: React.FC = () => {
       github: 'https://github.com/avmkui/app_proveedor',
     },
     {
-      id: 6,
+      id: 7,
       title: t('mowaPlatform'),
       description: t('mowaDesc'),
       video: MowaVideo,
@@ -416,7 +425,7 @@ const Projects: React.FC = () => {
       github: 'https://github.com/avmkui/app_proveedor',
     },
     {
-      id: 7,
+      id: 8,
       title: t('ecommercePlatform'),
       description: t('ecommerceDesc'),
       image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
@@ -425,7 +434,7 @@ const Projects: React.FC = () => {
       github: '#',
     },
     {
-      id: 8,
+      id: 9,
       title: t('musicStreamingApp'),
       description: t('musicStreamingDesc'),
       image: 'https://images.pexels.com/photos/3756766/pexels-photo-3756766.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
@@ -434,7 +443,7 @@ const Projects: React.FC = () => {
       github: '#',
     },
     {
-      id: 9,
+      id: 10,
       title: t('aiContentGenerator'),
       description: t('aiContentDesc'),
       image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
@@ -443,7 +452,7 @@ const Projects: React.FC = () => {
       github: '#',
     },
     {
-      id: 10,
+      id: 11,
       title: t('portfolioWebsite'),
       description: t('portfolioDesc'),
       image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
