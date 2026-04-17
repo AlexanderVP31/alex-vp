@@ -252,7 +252,7 @@ const FullscreenVideoPortal = ({ src, title, onClose }) => {
   };
   
   return ReactDOM.createPortal(
-    <div className="fixed inset-0 bg-black z-[1000] flex items-center justify-center p-4">
+    <div className="fixed inset-0 bg-black z-[1000] flex items-center justify-center p-0">
       <div className="absolute z-10 flex gap-4 top-6 right-6">
         <button 
           onClick={toggleMute}
@@ -271,14 +271,14 @@ const FullscreenVideoPortal = ({ src, title, onClose }) => {
         </button>
       </div>
       
-      <div className="relative w-full max-w-4xl overflow-hidden bg-black rounded-lg aspect-video">
+      <div className="relative w-full h-full max-w-full overflow-hidden bg-black">
         <video
           ref={videoRef}
           autoPlay
           loop
           muted={isMuted}
           playsInline
-          className="object-cover w-full h-full"
+          className="object-contain w-full h-full"
           onTimeUpdate={updateProgress}
           onEnded={() => setIsPlaying(false)}
           onClick={togglePlay}
