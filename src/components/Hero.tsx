@@ -4,7 +4,8 @@ import { ChevronDown } from 'lucide-react';
 import { useTranslation } from '../hooks/useTranslation';
 import Avatar from './ui/Avatar';
 
-import LogoSinFondo from '../assets/logo/iconsinfondo.png';
+//import LogoSinFondo from '../assets/logo/iconsinfondo.png';
+import LogoSinFondo from '../assets/logo/result_iconmatrix.png';
 import * as THREE from 'three';
 
 const Hero: React.FC = () => {
