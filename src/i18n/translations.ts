@@ -81,6 +81,8 @@ export const translations = {
     of: 'de',
     
     // Projects Data
+    carsPlatform: 'Plataforma para gestionar venta de Autos',
+    carsDesc: 'Una plataforma para gestionar y visualizar información, ofertas de autos de manera clara y precisa.',
     reservasPlatform: 'Plataforma de Reservas',
     reservasDesc: 'Una plataforma eficiente para gestionar y visualizar informes de reservas de hoteles de manera clara y precisa.',
     emergenciasPlatform: 'Plataforma de Emergencias',
@@ -189,6 +191,8 @@ export const translations = {
     of: 'of',
     
     // Projects Data
+    carsPlatform: 'Automotive Sales Platform',
+    carsDesc: 'A platform to manage and visualize car information and offers clearly and precisely.',
     emergenciasPlatform: 'Emergency Platform',
     emergenciasDesc: 'An efficient platform to manage and visualize emergency reports clearly and precisely.',
     adminDashboardsPlatform:'Admin Dashboards',
@@ -293,6 +297,8 @@ export const translations = {
     of: 'de',
     
     // Projects Data
+    carsPlatform: 'Plateforme de Vente Automobile',
+    carsDesc: 'Une plateforme pour gérer et visualiser les informations et offres de voitures de manière claire et précise.',
     emergenciasPlatform: 'Plateforme d\'Urgences',
     emergenciasDesc: 'Une plateforme efficace pour gérer et visualiser les rapports d\'urgence de manière claire et précise.',
     adminDashboardsPlatform:'Panneaux dadministration',
@@ -397,6 +403,8 @@ export const translations = {
     of: 'von',
     
     // Projects Data
+    carsPlatform: 'Automobilhandelsplattform',
+    carsDesc: 'Eine Plattform zur Verwaltung und Visualisierung von Autoinformationen und -angeboten klar und präzise.',
     emergenciasPlatform: 'Notfallplattform',
     emergenciasDesc: 'Eine effiziente Plattform zur Verwaltung und Visualisierung von Notfallberichten auf klare und präzise Weise.',
     adminDashboardsPlatform:'Management-Dashboards',
@@ -501,6 +509,8 @@ export const translations = {
     of: 'di',
     
     // Projects Data
+    carsPlatform: 'Piattaforma di Vendita Auto',
+    carsDesc: 'Una piattaforma per gestire e visualizzare informazioni e offerte di automobili in modo chiaro e preciso.',
     emergenciasPlatform: 'Piattaforma di Emergenze',
     emergenciasDesc: 'Una piattaforma efficiente per gestire e visualizzare i rapporti di emergenza in modo chiaro e preciso.',
     adminDashboardsPlatform:'Pannelli di amministrazione',
@@ -605,6 +615,8 @@ export const translations = {
     of: 'de',
     
     // Projects Data
+    carsPlatform: 'Plataforma de Vendas Automotivas',
+    carsDesc: 'Uma plataforma para gerenciar e visualizar informações e ofertas de carros de forma clara e precisa.',
     emergenciasPlatform: 'Plataforma de Emergências',
     emergenciasDesc: 'Uma plataforma eficiente para gerenciar e visualizar relatórios de emergência de forma clara e precisa.',
     adminDashboardsPlatform:'Painéis de controlo de gestão',
